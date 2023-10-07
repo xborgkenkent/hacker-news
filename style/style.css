@@ -1,0 +1,91 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    background-color: #020202;
+    background-size: cover;
+}
+header {
+    background-color: #00BF4F;
+    padding: 1rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: .5rem;
+}
+.logo h1 {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+
+.options {
+    display: flex;
+    padding-top: .1rem;
+    gap: 5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    padding: 2%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+article {
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding-left: 2%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    gap: 1rem;
+    border-radius: 2%;
+}
+
+article #published-by {
+    font-style: italic;
+}
+
+article #story-title {
+    font-size: 21px;
+}
+
+article #comments-size {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.prevnext {
+    width: 2%;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prevnext button{
+    background-color: #0C0C0C;
+    border: none;
+    color: #FFFFFF;
+}
+
+article a:visited {
+    color: #FFFFFF;
+}

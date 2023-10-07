@@ -1,0 +1,83 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    background-color: #020202;
+    background-size: cover;
+}
+header {
+    background-color: #00BF4F;
+    padding: 1rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: .5rem;
+}
+.logo h1 {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+
+.options {
+    display: flex;
+    padding-top: .1rem;
+    gap: 5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.story-detail {
+    color: #FFFFFF;
+    background-color: #0C0C0C;
+    padding-left: 2%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.comment-items {
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding-left: 2%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+
+.comment-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
