@@ -33,7 +33,7 @@ function displayDetails() {
 function createCommentElement(commentData) {
     const commentElement = document.createElement("li");
     commentElement.classList.add("comment");
-    commentElement.innerHTML = `<p>${commentData.content} ------------------ </p>`;
+    commentElement.innerHTML = `<p>${commentData.content}</p>`;
 
     if (commentData.comments && commentData.comments.length > 0) {
       const nestedCommentsContainer = document.createElement("ul");
