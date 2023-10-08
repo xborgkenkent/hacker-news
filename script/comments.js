@@ -3,7 +3,7 @@
 let detailsList = []
 let commentsData = []
   // Display the top-level comments
-  const commentsContainer = document.querySelector('.comment-items');
+const commentsContainer = document.querySelector(".comment-items");
 async function fetchComments() {
     const id = localStorage.getItem("id")
     const url = `https://node-hnapi.herokuapp.com/item/${id}`
@@ -31,41 +31,42 @@ function displayDetails() {
 }
 
 function createCommentElement(commentData) {
-    const commentElement = document.createElement('li');
-    commentElement.classList.add('comment');
-    commentElement.innerHTML = `<p>${commentData.content}</p>`;
-  
+    const commentElement = document.createElement("li");
+    commentElement.classList.add("comment");
+    commentElement.innerHTML = `<p>${commentData.content} ------------------ </p>`;
+
     if (commentData.comments && commentData.comments.length > 0) {
-      const nestedCommentsContainer = document.createElement('ul');
-      nestedCommentsContainer.classList.add('comment-list');
+      const nestedCommentsContainer = document.createElement("ul");
+      nestedCommentsContainer.classList.add("comment-list");
       commentData.comments.forEach(nestedCommentData => {
-        const user = document.createElement('p');
-        user.textContent = `${nestedCommentData.user} ${nestedCommentData.time_ago}`
+        const user = document.createElement("p");
+        user.textContent = `${nestedCommentData.user} - ${nestedCommentData.time_ago}`
         const nestedCommentElement = createCommentElement(nestedCommentData);
         nestedCommentsContainer.appendChild(user);
         nestedCommentsContainer.appendChild(nestedCommentElement);
       });
       
       commentElement.appendChild(nestedCommentsContainer);
-    }
+    } 
   
     return commentElement;
-  }
+}
   
-  function displayComments(data, container) {
+  //top comment
+function displayComments(data, container) {
     data.comments.forEach(commentData => {
-      const user = document.createElement('p');
-      user.textContent = `${commentData.user}`
-      const commentElement = createCommentElement(commentData);
-      container.appendChild(user);
-      container.appendChild(commentElement);
-  
-      // recursion
-      if (commentData.comments && commentData.comments.length > 0) {
-        const nestedCommentsContainer = commentElement.querySelector('ul');
-        displayComments(commentData, nestedCommentsContainer);
-      }
-    });
-  }
+    const user = document.createElement("p");
+    user.textContent = `${commentData.user} - ${commentData.time_ago}`
+    const commentElement = createCommentElement(commentData);
+    container.appendChild(user);
+    container.appendChild(commentElement);
+
+    // recursion
+    // if (commentData.comments && commentData.comments.length > 0) {
+    //   const nestedCommentsContainer = commentElement.querySelector("ul");
+    //   displayComments(commentData, nestedCommentsContainer);
+    // }
+  });
+}
 
 fetchComments()
